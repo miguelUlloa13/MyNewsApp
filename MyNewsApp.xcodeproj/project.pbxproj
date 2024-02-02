@@ -58,13 +58,37 @@
 			children = (
 				78F8221D2B6D450C00836418 /* AppDelegate.swift */,
 				78F8221F2B6D450C00836418 /* SceneDelegate.swift */,
-				78F822312B6D463700836418 /* HomeViewController.swift */,
-				78F822232B6D450C00836418 /* Main.storyboard */,
+				78F822352B6D4AC500836418 /* Controller */,
+				78F822342B6D4ABC00836418 /* View */,
+				78F822332B6D4AB500836418 /* Model */,
 				78F822262B6D450E00836418 /* Assets.xcassets */,
-				78F822282B6D450E00836418 /* LaunchScreen.storyboard */,
 				78F8222B2B6D450E00836418 /* Info.plist */,
 			);
 			path = MyNewsApp;
+			sourceTree = "<group>";
+		};
+		78F822332B6D4AB500836418 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78F822342B6D4ABC00836418 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78F822282B6D450E00836418 /* LaunchScreen.storyboard */,
+				78F822232B6D450C00836418 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78F822352B6D4AC500836418 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78F822312B6D463700836418 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
