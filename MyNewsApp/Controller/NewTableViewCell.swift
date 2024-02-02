@@ -24,8 +24,17 @@ class NewTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         self.CellHorizontalStackView.backgroundColor = .cellBackGround
         
+        NewDetailButton.contentHorizontalAlignment = .right
+        NewDetailButton.setTitle("Ver más", for: .normal)
+        customLabels()
+        
     }
-
+    
+    private func customLabels() {
+        NewTitleLabel.myCustomFont(font: .TimesNewRomanPS_BoldMT)
+        NewDescriptionLabel.myCustomFont(size: 17, textAlignment: .left)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

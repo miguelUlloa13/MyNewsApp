@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
         // TableView
     @IBOutlet weak var NewsTableView: UITableView!
     
+    // MARK: - Properties
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +28,14 @@ class HomeViewController: UIViewController {
         NewsTableView.register(UINib(nibName: "NewTableViewCell", bundle: nil), forCellReuseIdentifier: "NewTableViewCell")
         NewsTableView.backgroundColor = .clear
         
+        customLabels()
+        
+    }
+    
+    private func customLabels() {
+        HomeTitleLabel.text = "NEWS TODAY"
+        HomeTitleLabel.myCustomFont(size: 50,font: .TimesNewRomanPS_BoldItalicMT)
+        HomeTitleLabel.underline()
     }
 
 }
@@ -39,6 +50,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewTableViewCell", for: indexPath) as! NewTableViewCell
 
+        cell.NewTitleLabel.text = "Titulo"
+        cell.NewDescriptionLabel.text = "Descripcion"
+        
         return cell
     }
     
