@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
         NewsTableView.backgroundColor = .clear
         
         customLabels()
+        getNews()
         
     }
     
@@ -40,6 +41,18 @@ class HomeViewController: UIViewController {
         HomeTitleLabel.text = "NEWS TODAY"
         HomeTitleLabel.myCustomFont(size: 50,font: .TimesNewRomanPS_BoldItalicMT)
         HomeTitleLabel.underline()
+    }
+    
+    private func getNews(){
+        Task {
+            let result = await apiClient.getNews()
+            switch result {
+            case .success(let model):
+                news = model.articles
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }
