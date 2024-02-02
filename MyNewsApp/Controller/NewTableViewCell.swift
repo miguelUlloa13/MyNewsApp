@@ -21,13 +21,19 @@ class NewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        // Set color to items
         self.backgroundColor = .clear
         self.CellHorizontalStackView.backgroundColor = .cellBackGround
         
-        NewDetailButton.contentHorizontalAlignment = .right
-        NewDetailButton.setTitle("Ver más", for: .normal)
+        
+        customButton()
         customLabels()
         
+    }
+    
+    private func customButton() {
+        NewDetailButton.contentHorizontalAlignment = .right
+        NewDetailButton.setTitle("Ver más", for: .normal)
     }
     
     private func customLabels() {

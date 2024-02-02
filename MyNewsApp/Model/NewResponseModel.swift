@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Connection response to API
 struct NewResponseModel: Decodable {
     
     let status: String

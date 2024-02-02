@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
         customLabels()
         getNews()
         
+        
     }
     
     // MARK: - Methods
@@ -73,7 +74,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.NewDescriptionLabel.text = news[indexPath.row].description
         cell.NewImageView.kf.setImage(with: URL(string: news[indexPath.row].urlToImage ?? "" ))
         
+        // detect wich button was pressed
+        cell.NewDetailButton.tag = indexPath.row
+        cell.NewDetailButton.addTarget(self, action: #selector(whichButtonPressed(sender:)), for: .touchUpInside)
+        
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController(newDataModel: news[indexPath.row])
+        self.present(detailViewController, animated: true)
+    }
+    
+    @objc func whichButtonPressed(sender: UIButton) {
+        let buttonNumber = sender.tag
+        let indexPath = IndexPath(row: buttonNumber, section: 0)
+        tableView(self.NewsTableView, didSelectRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,3 +99,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     
 }
+
+

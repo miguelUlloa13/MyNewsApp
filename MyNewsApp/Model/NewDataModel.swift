@@ -7,10 +7,12 @@
 
 import Foundation
 
+/// Struct from a New
 struct NewDataModel: Decodable {
     let title: String?
     let description: String?
     let urlToImage: String?
+    let content: String?
 }
 
 /*
