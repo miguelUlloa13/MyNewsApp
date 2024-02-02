@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,10 +17,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DYV-3H-H7q">
+                                <rect key="frame" x="12" y="103" width="369" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g88-hb-pWU">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="uTO-Se-8Px"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3RH-NF-d7n">
+                                        <rect key="frame" x="0.0" y="80" width="369" height="635"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g88-hb-pWU" firstAttribute="leading" secondItem="DYV-3H-H7q" secondAttribute="leading" id="EMY-II-Uef"/>
+                                    <constraint firstItem="g88-hb-pWU" firstAttribute="top" secondItem="DYV-3H-H7q" secondAttribute="top" id="Npm-uF-87a"/>
+                                    <constraint firstAttribute="trailing" secondItem="g88-hb-pWU" secondAttribute="trailing" id="hZx-ES-xfM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackGroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DYV-3H-H7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="07p-OR-n3C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DYV-3H-H7q" secondAttribute="bottom" id="3Ym-9l-OI6"/>
+                            <constraint firstItem="DYV-3H-H7q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4OP-LB-QO7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DYV-3H-H7q" secondAttribute="trailing" constant="12" id="Eux-ui-qTr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oaZ-KM-hn4"/>
+                    <connections>
+                        <outlet property="HomeTitleLabel" destination="g88-hb-pWU" id="fsI-aq-oi7"/>
+                        <outlet property="NewsTableView" destination="3RH-NF-d7n" id="Gui-7R-Qao"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +82,10 @@
     </scenes>
     <resources>
         <namedColor name="BackGroundColor">
-            <color red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9882352941176471" green="0.95294117647058818" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
