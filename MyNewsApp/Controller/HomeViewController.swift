@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+            self.NewsTableView.reloadData()
         }
     }
 
@@ -61,14 +62,14 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewTableViewCell", for: indexPath) as! NewTableViewCell
 
-        cell.NewTitleLabel.text = "Titulo"
-        cell.NewDescriptionLabel.text = "Descripcion"
+        cell.NewTitleLabel.text = news[indexPath.row].title?.uppercased()
+        cell.NewDescriptionLabel.text = news[indexPath.row].description
         
         return cell
     }
