@@ -9,6 +9,8 @@ import UIKit
 
 class NewTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var CellHorizontalStackView: UIStackView!
+    
     @IBOutlet weak var NewImageView: UIImageView!
     
     @IBOutlet weak var NewTitleLabel: UILabel!
@@ -18,7 +20,10 @@ class NewTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.backgroundColor = .clear
+        self.CellHorizontalStackView.backgroundColor = .cellBackGround
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -19,10 +19,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Ulloa News"
+        self.title = "Home"
         NewsTableView.delegate = self
         NewsTableView.dataSource = self
         NewsTableView.register(UINib(nibName: "NewTableViewCell", bundle: nil), forCellReuseIdentifier: "NewTableViewCell")
+        NewsTableView.backgroundColor = .clear
         
     }
 

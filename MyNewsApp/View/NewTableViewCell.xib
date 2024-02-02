@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="height" constant="1" id="toS-lX-Q7D"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-09-bLf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-09-bLf">
                                         <rect key="frame" x="0.0" y="132" width="75.333333333333329" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="J7Q-as-zTW"/>
@@ -81,7 +81,7 @@
                                     <constraint firstItem="tGo-dJ-RVh" firstAttribute="leading" secondItem="ZQo-YA-6y6" secondAttribute="leading" id="PsN-eI-RiO"/>
                                     <constraint firstAttribute="bottom" secondItem="xdb-09-bLf" secondAttribute="bottom" id="YBc-od-5Gc"/>
                                     <constraint firstItem="xdb-09-bLf" firstAttribute="leading" secondItem="ZQo-YA-6y6" secondAttribute="leading" id="a4Z-bA-537"/>
-                                    <constraint firstAttribute="trailing" secondItem="xdb-09-bLf" secondAttribute="trailing" id="gGz-pl-MqM"/>
+                                    <constraint firstAttribute="trailing" secondItem="xdb-09-bLf" secondAttribute="trailing" constant="15" id="gGz-pl-MqM"/>
                                     <constraint firstItem="iHH-wl-ZZP" firstAttribute="leading" secondItem="ZQo-YA-6y6" secondAttribute="leading" constant="5" id="zWM-l4-wrx"/>
                                 </constraints>
                             </stackView>
@@ -102,6 +102,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="CellHorizontalStackView" destination="9L7-Dg-VqZ" id="B9C-0B-Wsz"/>
                 <outlet property="NewDescriptionLabel" destination="td3-MN-Jn2" id="CTw-06-Oeu"/>
                 <outlet property="NewDetailButton" destination="xdb-09-bLf" id="49d-mg-MbO"/>
                 <outlet property="NewImageView" destination="eVf-CZ-9UT" id="Cze-aZ-WqK"/>
