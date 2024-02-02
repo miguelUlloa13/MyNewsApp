@@ -21,6 +21,8 @@
 		78F822422B6D5EA400836418 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F822412B6D5EA400836418 /* NetworkError.swift */; };
 		78F822442B6D5EC700836418 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F822432B6D5EC700836418 /* APIClient.swift */; };
 		78F822472B6D64D500836418 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 78F822462B6D64D500836418 /* Kingfisher */; };
+		78F8224C2B6D6B0000836418 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8224A2B6D6B0000836418 /* DetailViewController.swift */; };
+		78F8224D2B6D6B0000836418 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F8224B2B6D6B0000836418 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		78F8223F2B6D5DAD00836418 /* NewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataModel.swift; sourceTree = "<group>"; };
 		78F822412B6D5EA400836418 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		78F822432B6D5EC700836418 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		78F8224A2B6D6B0000836418 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		78F8224B2B6D6B0000836418 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			children = (
 				78F822372B6D4B8A00836418 /* NewTableViewCell.xib */,
 				78F822282B6D450E00836418 /* LaunchScreen.storyboard */,
+				78F8224B2B6D6B0000836418 /* DetailViewController.xib */,
 				78F822232B6D450C00836418 /* Main.storyboard */,
 			);
 			path = View;
@@ -110,6 +115,7 @@
 			children = (
 				78F822312B6D463700836418 /* HomeViewController.swift */,
 				78F822362B6D4B8A00836418 /* NewTableViewCell.swift */,
+				78F8224A2B6D6B0000836418 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			files = (
 				78F8222A2B6D450E00836418 /* LaunchScreen.storyboard in Resources */,
 				78F822272B6D450E00836418 /* Assets.xcassets in Resources */,
+				78F8224D2B6D6B0000836418 /* DetailViewController.xib in Resources */,
 				78F822392B6D4B8A00836418 /* NewTableViewCell.xib in Resources */,
 				78F822252B6D450C00836418 /* Main.storyboard in Resources */,
 			);
@@ -207,6 +214,7 @@
 				78F822202B6D450C00836418 /* SceneDelegate.swift in Sources */,
 				78F822382B6D4B8A00836418 /* NewTableViewCell.swift in Sources */,
 				78F822322B6D463700836418 /* HomeViewController.swift in Sources */,
+				78F8224C2B6D6B0000836418 /* DetailViewController.swift in Sources */,
 				78F8223E2B6D5D8300836418 /* NewResponseModel.swift in Sources */,
 				78F822442B6D5EC700836418 /* APIClient.swift in Sources */,
 			);
