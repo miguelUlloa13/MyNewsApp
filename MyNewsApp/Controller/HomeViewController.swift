@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
@@ -70,6 +71,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.NewTitleLabel.text = news[indexPath.row].title?.uppercased()
         cell.NewDescriptionLabel.text = news[indexPath.row].description
+        cell.NewImageView.kf.setImage(with: URL(string: news[indexPath.row].urlToImage ?? "" ))
         
         return cell
     }
