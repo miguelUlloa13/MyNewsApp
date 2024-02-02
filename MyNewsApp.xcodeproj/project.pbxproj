@@ -18,6 +18,8 @@
 		78F8223C2B6D572C00836418 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8223B2B6D572C00836418 /* Extensions.swift */; };
 		78F8223E2B6D5D8300836418 /* NewResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8223D2B6D5D8300836418 /* NewResponseModel.swift */; };
 		78F822402B6D5DAD00836418 /* NewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8223F2B6D5DAD00836418 /* NewDataModel.swift */; };
+		78F822422B6D5EA400836418 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F822412B6D5EA400836418 /* NetworkError.swift */; };
+		78F822442B6D5EC700836418 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F822432B6D5EC700836418 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		78F8223B2B6D572C00836418 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		78F8223D2B6D5D8300836418 /* NewResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResponseModel.swift; sourceTree = "<group>"; };
 		78F8223F2B6D5DAD00836418 /* NewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataModel.swift; sourceTree = "<group>"; };
+		78F822412B6D5EA400836418 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		78F822432B6D5EC700836418 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				78F8223D2B6D5D8300836418 /* NewResponseModel.swift */,
 				78F8223F2B6D5DAD00836418 /* NewDataModel.swift */,
+				78F822412B6D5EA400836418 /* NetworkError.swift */,
+				78F822432B6D5EC700836418 /* APIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,12 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F822402B6D5DAD00836418 /* NewDataModel.swift in Sources */,
+				78F822422B6D5EA400836418 /* NetworkError.swift in Sources */,
 				78F8223C2B6D572C00836418 /* Extensions.swift in Sources */,
 				78F8221E2B6D450C00836418 /* AppDelegate.swift in Sources */,
 				78F822202B6D450C00836418 /* SceneDelegate.swift in Sources */,
 				78F822382B6D4B8A00836418 /* NewTableViewCell.swift in Sources */,
 				78F822322B6D463700836418 /* HomeViewController.swift in Sources */,
 				78F8223E2B6D5D8300836418 /* NewResponseModel.swift in Sources */,
+				78F822442B6D5EC700836418 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

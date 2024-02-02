@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var NewsTableView: UITableView!
     
     // MARK: - Properties
+    let apiClient = APIClient()
+    var news = [NewDataModel]()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -31,6 +33,8 @@ class HomeViewController: UIViewController {
         customLabels()
         
     }
+    
+    // MARK: - Methods
     
     private func customLabels() {
         HomeTitleLabel.text = "NEWS TODAY"
